@@ -1,6 +1,6 @@
-# Ä§Ëş
+# Frog
 
-ÓÃ Win32 »ã±àÊµÏÖ¡£
+Implement with Win32 assembly language.
 
 ## Build
 
