@@ -3,11 +3,9 @@
 ; define WM_CHAR handler
 ; ---------------------------------
 include stdafx.inc
+include images.inc
 
 extrn status: dword
-extrn hBitmapBG: dword
-extrn hBitmapBG1: dword
-extrn hBitmapBG3: dword
 
 .code
 ProcChar proc hWnd, uMsg, wParam, lParam

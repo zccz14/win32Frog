@@ -1,6 +1,6 @@
 # Build
 OUTPUT = main.exe
-OBJS = main.obj background.obj proc_char.obj
+OBJS = main.obj background.obj proc_char.obj images.obj
 # Configuration
 SrcPath = src
 
