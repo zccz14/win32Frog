@@ -52,6 +52,11 @@ dPosY3 dd 235
 status dd 0
 mov_width dd 810+156
 .data?
+public status
+public hBitmapBG
+public hBitmapBG1
+public hBitmapBG2
+public hBitmapBG3
 hInstance dd  ?
 hWinMain dd  ?
 hBitmapHero dd ?
@@ -146,40 +151,7 @@ ProcTimer proc hWnd, uMsg, idEvent, dwTime
 ProcTimer endp
 
 
-ProcChar proc hWnd, uMsg, wParam, lParam
-    local @stRect: RECT
 
-
-
-   .if wParam == 032H
-      mov eax, hBitmapBG1
-      mov hBitmapBG, eax
-      mov status,2
-      invoke GetClientRect, hWnd, addr @stRect
-      invoke InvalidateRect, hWnd, addr @stRect, TRUE
-      invoke UpdateWindow, hWnd
-   .endif
-
-   .if wParam == 033H
-      mov eax, hBitmapBG1
-      mov hBitmapBG, eax
-      mov status,3
-   .endif
-
-   .if wParam == 034H
-      mov eax, hBitmapBG1
-      mov hBitmapBG, eax
-      mov status,4
-   .endif
-
-   .if wParam == 035H
-    mov eax, hBitmapBG3
-    mov hBitmapBG, eax
-    mov status,5
-  .endif
-
-   ret
-ProcChar endp
 
 ProcKeydown proc hWnd, uMsg, wParam, lParam
   local @stRect: RECT

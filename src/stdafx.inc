@@ -25,3 +25,4 @@ IDM_NEWGAME equ 2001h
 IDM_QUIT equ 2002h
 
 include background.inc
+include proc_char.inc
